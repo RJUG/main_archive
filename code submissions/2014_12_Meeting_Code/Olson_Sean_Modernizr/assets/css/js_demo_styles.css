@@ -1,0 +1,123 @@
+/*
+	File: demo_page_styles.css
+	By: Sean Olson
+	Date: 11/16/2014
+	Purpose: provide simple CSS styling for demo.html page and its includes
+*/
+html{
+	font-size: 14pt;
+}
+body{
+	font-family:  "Times New Roman", Times serif;
+	font-size: 14pt;
+	color:#333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: arial, helvetica, sans-serif ;
+	font-weight: bold;
+	color: #67c;
+
+}
+h1{
+	font-size: 2.4rem;
+	margin: 0 0 10px 10px;	
+}
+h2{
+	font-size: 2.0rem;
+	margin: 0 0 10px 10px;	
+}
+h3{
+	font-size: 1.8rem;
+	margin: 0 0 10px 10px;	
+}
+h4{
+	font-size: 1.6rem;
+	margin: 0 0 5px 5px;	
+}
+h5{
+	font-size: 1.5rem;
+	margin: 0 0 5px 5px;	
+}
+h6{
+	font-size: 1.2rem;
+	font-style: italic;
+	margin: 5px 0 5px 5px;
+	color:#999;	
+}
+a{
+	text-decoration: none;
+}
+.container{
+	max-width: 1180px;
+	margin: 0 auto 20px;
+}
+.page-heading{
+	max-width: 100%;
+	background-color: #222; 
+	padding: 10px;
+	margin: 0 auto;
+}
+.page-heading h5{
+	display: inline-block; 
+	text-align: left; 
+	color: #fff; 
+	margin: 0 10px;
+	font-weight: normal;
+}
+.page-heading div.selector-group{
+	display: inline-block; 
+	float: right; 
+	margin: 5px 0;
+	padding: 0 10px;
+	font-family: arial, helvetica, sans-serif ;
+}
+.page-heading div.selector-group span{
+	color:#fff; 
+	font-weight: bold;
+}
+#content-frame{
+	max-width: 100%;
+	padding: 10px;
+	margin: 10px auto;
+}
+.content-panel{
+	max-width: 100%;
+	border: 1px solid #888;
+	margin: 0 auto 20px;
+
+}
+.inset-panel{
+	width: 90%;
+	margin: 20px auto;
+	padding: 10px 0;
+	
+}
+
+.emphasized{
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+#page-description{
+
+	color: #111;
+	padding: 10px;
+	border: 1px dashed #ccc;
+	background-color:#ddd;
+}
+
+th {padding: 3px 10px;}
+.basic-table{width:100%;}
+.form-label{width: 20%; text-align: right; padding: 5px 5px 5px 0;}
+.form-input{width: 40%; text-align: left; padding: 5px 0 5px 5px;}
+.form-button{width: 20%; text-align: left; padding: 5px 0 5px 5px;}
+.key-cell{width: 30%; text-align: right; padding: 5px;}
+.value-cell{width: 70%; text-align: left; padding: 5px; font-weight: bold;}
+.cell-20{width: 20%;}
+
+.centered-text{text-align: center}
