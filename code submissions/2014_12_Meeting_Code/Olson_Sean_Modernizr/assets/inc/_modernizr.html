@@ -1,0 +1,89 @@
+<!--
+	File: _modernozr.html
+	By: Sean Olson
+	Date: 12/01/2014
+	Purpose: about moderizr.
+-->
+<h1 id="page-title"></h1>
+<div class="content-panel">
+	<div id="page-description" class="inset-panel"></div>
+	<pre class="inset-panel">Modernizr.inputtypes.type</pre>
+</div>
+
+<style>
+	.key-cell{width: 30%; text-align: right; padding: 5px;}
+	.value-cell{width: 70%; text-align: left; padding: 5px; font-weight: bold;}
+</style>
+
+<div class="content-panel">
+	<div class="inset-panel">
+		<table class="basic-table">
+			<tr><td colspan="2"><h6>Browser Support for HTML 5 Input Types</h6></td></tr>
+			<tr>
+				<td class="key-cell">Color Type Input:</td>
+				<td class="value-cell" id="has-color"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">Number Type Input:</td>
+				<td class="value-cell" id="has-number"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">Range Type Input:</td>
+				<td class="value-cell" id="has-range"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">Tel Type Input:</td>
+				<td class="value-cell" id="has-tel"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">URL Type Input:</td>
+				<td class="value-cell" id="has-url"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">Search Type Input:</td>
+				<td class="value-cell" id="has-search"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">Email Type Input:</td>
+				<td class="value-cell" id="has-email"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">Date Type Input:</td>
+				<td class="value-cell" id="has-date"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">Month Type Input:</td>
+				<td class="value-cell" id="has-month"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">Week Type Input:</td>
+				<td class="value-cell" id="has-week"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">Time Type Input:</td>
+				<td class="value-cell" id="has-time"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">DateTime Type Input:</td>
+				<td class="value-cell" id="has-datetime"></td>
+			</tr>
+			<tr>
+				<td class="key-cell">DateTime-Local Type Input:</td>
+				<td class="value-cell" id="has-datetime-local"></td>
+			</tr>
+		</table>	
+	</div>
+</div>
+
+
+<script>
+	var dp = new demoPage();
+
+	dp.page_title = "Modernizr JS Library";
+	dp.page_description = "Modernizr is a small JavaScript library that detects the availability of native implementations for next-generation web technologies, i.e. features that stem from the HTML5 and CSS3 specifications. Many of these features are already implemented in at least one major browser (most of them in two or more), and what Modernizr does is, very simply, tell you whether the current browser has this feature natively implemented or not.  Testing for a availability of a input type uses the standard syntax below with the type of input specified:"
+	
+	pageInit(dp);
+
+	$(window).on("load", browserTest());
+
+</script>

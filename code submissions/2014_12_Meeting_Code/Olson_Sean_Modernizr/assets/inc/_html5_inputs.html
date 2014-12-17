@@ -1,0 +1,166 @@
+<!--
+	File: _modernozr.html
+	By: Sean Olson
+	Date: 12/01/2014
+	Purpose: about moderizr.
+-->
+
+
+<h1 id="page-title"></h1>
+<div class="content-panel" id="text-panel">
+	<div id="dm-challenge">
+		<div class="instruction emphasized" id="challenge-instruction"></div>	
+		<div id="page-description" class="inset-panel" style="display:none;"></div>
+	</div>
+
+
+	<div class="inset-panel">
+	<table id="demo-form" class="basic-table">
+		<tr>
+			<th style="text-align:right;"> Type: </th>
+			<th> Input Instance </th>
+			<th class="cell-20 centered-text"> Supported </th>
+			<th class="cell-20 centered-text"> Run Code </th>
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="color-input" class="form-label">Color Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="color" id="color-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-color"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('color-input', 'page-description');">Run Code</button></td>	
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="number-input" class="form-label">Number Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="number" id="number-input">
+			</td>	
+			<td class="cell-20 centered-text" id="has-number"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('number-input', 'page-description');">Run Code</button></td>					
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="range-input" class="form-label">Range Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="range" name="" id="range-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-range"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('range-input', 'page-description');">Run Code</button></td>					
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="telephone-input" class="form-label">Telephone Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="tel" id="telephone-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-tel"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('telephone-input', 'page-description');">Run Code</button></td>					
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="url-input" class="form-label">URL Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="url" name="" id="url-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-url"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('url-input', 'page-description');">Run Code</button></td>					
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="search-input" class="form-label">Search Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="search" id="search-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-search"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('search-input', 'page-description');">Run Code</button></td>				
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="email-input" class="form-label">Email Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="email" id="email-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-email"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('email-input', 'page-description');">Run Code</button></td>							
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="date-input" class="form-label">Date Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="date" id="date-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-date"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('date-input', 'page-description');">Run Code</button></td>							
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="month-input" class="form-label">Month Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="month" name="" id="month-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-month"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('month-input', 'page-description');">Run Code</button></td>					
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="week-input" class="form-label">Week Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="week" id="week-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-week"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('week-input', 'page-description');">Run Code</button></td>					
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="time-input" class="form-label">Time Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="time" name="" id="time-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-time"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('time-input', 'page-description');">Run Code</button></td>					
+		</tr>
+		<tr>
+			<td class="form-label">
+				<label for="datetime-input" class="form-label">Date-Time Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="datetime" id="datetime-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-datetime"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('datetime-input', 'page-description');">Run Code</button></td>					
+		</tr>
+						<tr>
+			<td class="form-label">
+				<label for="datetimelocal-input" class="form-label">Date-Time Local Input:</label>
+			</td>
+			<td class="form-input">
+				<input type="datetime-local" id="datetimelocal-input">
+			</td>
+			<td class="cell-20 centered-text" id="has-datetime-local"></td>
+			<td class="cell-20 centered-text"><button type="button" onclick="executeAwesomeCode('datetimelocal-input', 'page-description');">Run Code</button></td>					
+		</tr>		
+	
+	</table>
+	</div>	
+</div>
+
+<script>
+	$(window).on("load", browserTest());
+	var dp = new demoPage();
+	dp.page_title = "HTML 5 Inputs";
+	dp.page_description = ""
+	pageInit(dp);  
+</script>
