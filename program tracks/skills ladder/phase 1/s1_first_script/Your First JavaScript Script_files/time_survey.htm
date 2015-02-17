@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Time Survey</title>
+	<link href="time_survey_data/base.css" rel="stylesheet" type="text/css">
+	</head>
+	<body style="margin-top:20px; width:400px; background-color:#fff;">
+	
+				<form action="time_survey.php" method="GET" name="time_survey" id="time_survey">
+				<input id="url" name="url" value="/javascript1/YourFirstScript.html" type="hidden">
+			
+			<div id="time_survey_form">
+			    <p><strong>How long did it take you to complete this lesson?</strong> <a href="http://www.oreillyschool.com/about-us/faq/#whyAskHours" target="_blank" style="margin-left:10px; font-size:80%; font-weight:normal;">What's this?</a><br>
+			    (This estimate helps us verify time projections for courses, anonymously. It is not part of your evaluation.) 
+			    </p>
+			
+			    <label style="font-weight:normal; margin-right:10px;">Hours
+			    	<input size="2" id="hours" name="hours" value="0" style="text-align:right;" type="text">
+				</label>
+				
+			    <label style="font-weight:normal; margin-right:30px;">Minutes
+			    	<input size="2" id="minutes" name="minutes" value="0" style="text-align:right;" type="text">
+			    </label>
+			    
+	<input id="survey_submit_btn" value="Submit" type="submit">	
+				<!-- For validation -->
+				<div id="no_entry_error" class="ost_hidden error">
+					<p>Please enter the amount of time you spent working on this.</p>
+				</div>
+			
+				<div id="invalid_entry_error" class="ost_hidden error">
+					<p>Please enter only non-negative integers for hours and minutes.</p>
+				</div>
+			    
+				<div id="db_error" class="ost_hidden error">
+					<p>Sorry, there was a database error. Please try again.</p>
+				</div>
+			    
+							</div>
+				
+				</form>
+				
+	<script src="time_survey_data/jquery.js"></script>
+	
+	<script>
+	jQuery(document).ready(function ($) {
+
+	    		$('#url').attr('value', '/javascript1/YourFirstScript.html'); // Set hidden field so we can get entryid when submitting, by matching coderunner path
+		
+	    $('#survey_submit_btn').on('click', function (event) { // Attach validation handler for coderunner lesson
+	        event.preventDefault();
+	        $('#no_entry_error').addClass('ost_hidden');
+	        $('#invalid_entry_error').addClass('ost_hidden');
+	        if ( validate_form() ) {
+	            $(this).closest('form').submit();
+	        }
+	    });
+	    	    
+	    	    
+	    	    
+		function validate_form () { // Validates time survey form
+	        var hours = $.trim( $('#hours').val() ); // Get time survey values for validation
+	        var minutes = $.trim( $('#minutes').val() );
+	        
+	        hours = (hours == '') ? 0 : hours; // So we don't have to test for empty strings later
+	        minutes = (minutes == '') ? 0 : minutes;
+	        
+	        try {
+	            hours = parseInt(hours); // throws error if non-numeric string
+	            minutes = parseInt(minutes);
+	            
+	            hours_valid = ( typeof(hours) === 'number' && (hours % 1 === 0) && hours >= 0 ); // Is a non-negative integer
+	            minutes_valid = ( typeof(minutes) === 'number' && (minutes % 1 === 0) && minutes >= 0 );
+	                
+	            // Validate time survey
+	            // Making survey optional now - zeros in both fields permissible - sean 11/5/13
+//	            if ( hours == 0 && minutes == 0 ) { // Both fields are empty or zero (fails if use strict equals here - who knows why?)
+//	                $('#no_entry_error').removeClass('ost_hidden');
+//	                return false;
+//	            } else 
+
+		       if ( ! hours_valid || ! minutes_valid ) { // At least one isn't a non-negative integer
+	                $('#invalid_entry_error').removeClass('ost_hidden');
+	                return false;
+	            }
+	        } catch (e) {
+	            $('#invalid_entry_error').removeClass('ost_hidden');
+	            return false;
+	        }
+	
+	        return true;
+	    }
+	});
+	</script>
+
+
+
+</body></html>

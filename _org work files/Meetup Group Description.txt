@@ -1,5 +1,0 @@
-Riverside JS has morphed into two user groups to better address the expansive world of JavaScript development.  The spinoff group will occupy itself with Ember.js. The original Riverside JS Group will reconvene as a skill-building user group.
-
-This will be a departure from the presentation based format.  Instead Riverside JS will focus on writing code to solve real problems and sharing those solutions with the group.  In the process our members will develop a set of best practices for front-end JavaScript development, build an open and shared code repository, and enhance their professional prospects in a field that grows increasing dependent of JavaScript.
-
-Riverside JS welcomes developers of all skill levels -- beginner to genius.  The only requirement is a willingness to roll up your sleeves, write code, and share it with the group.  We hope to see you at our next meetup.

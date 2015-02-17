@@ -1,0 +1,619 @@
+/* $Id: Lab.css,v 1.37 2012/02/15 18:53:06 nutzman Exp $ */
+body {
+	background-color: white;
+	color: black;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	
+}
+a.aS:link, a.aS:visited  {
+	color: black;
+	font-size: 16px;
+	margin-right: 5px;
+}
+a.aL:link, a.aL:visited {
+	color:black;
+	font-size: 20px;	
+	margin-right: 5px;
+}
+
+a.lv:link, a.lv:visited { 
+    color: black;
+    font-size: 12px;
+}
+
+a:link, a:visited {
+	color: black;
+}
+
+.resize div {
+	border: 3px solid black; 
+	display: none;
+	position: absolute;
+	padding: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 50px;
+	z-index: 100;
+	font-weight: bolder;
+}
+
+.resize:hover div
+{
+    top: 40px; left: 10px;
+    display: block;
+    background-color: white;
+    color: black;
+}
+
+.resize .aS { font-size: 16px; text-decoration: underline; font-weight: normal; }
+.resize .aL { font-size: 20px; text-decoration: underline; font-weight: normal; }
+.resize .lv { font-size: 12px; text-decoration: underline; font-weight: normal; }
+
+.c { text-align: center }
+
+.c table { margin-left:auto; margin-right:auto; }
+
+del { color: red;}
+ins { color: blue; text-decoration: none;}
+
+ul {
+	font-style: normal;
+	line-height: 1em;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	list-style-position: outside;
+	list-style-type: disc;
+	margin-left: 10px;
+}
+
+ol {
+	font-style: normal;
+	line-height: 1em;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	list-style-position: outside;
+	list-style: inside;
+	margin-left: 10px;
+	list-style-type: decimal;
+}
+
+li {
+    padding: 4px;
+}
+
+.tbl {
+	margin: 5px;
+	border-width: 1px 1px 1px 1px;
+	border-style: solid;
+	border-spacing: 0px;
+	font-size: inherit;
+}
+
+.tbl td, .tbl th {
+	padding: 3px;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+}
+
+.noteBox {
+	border: 1px dashed black;
+	font-size: inherit;
+}
+
+.pBox
+{
+	margin-top: 10px;
+}
+
+.fBox
+{
+	margin-bottom: 10px;
+}
+
+
+.noteTitle {
+	font-size: 1.25em;
+	font-weight: bold;
+	background-color: inherit;
+	color: #8b0000;
+	text-align: right;
+	padding: 5px;
+}
+
+.note {
+	font-size: 1.0em;
+	text-align: left;
+	padding: 10px;
+	vertical-align: middle;
+}
+
+.actionListBox {
+	border: 2px dotted black;
+	background-color: #DEB887;
+	color: black;
+}
+
+.actionTitle {
+	font-size: 1.25em;
+	font-weight: bold;
+	background-color: inherit;
+	color: #8b0000;
+	text-align: right;
+	padding: 5px;
+	width: 10%;
+}
+
+.actionList {
+	text-align: left;
+	padding: 10px;
+	vertical-align: middle;
+}
+
+.actionList ol {
+	list-style-type: decimal;
+}
+
+.actionItem {
+	list-style: inside;
+}
+
+.observeBox {
+	min-width: 90%;
+	margin: 15px;
+	overflow: auto;
+	border: 1px solid black;
+}
+
+.observeTitle {
+	color: black;
+	background-color: #B0C4DE;
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.observe {
+	white-space: pre;
+	font-family: courier, "courier new", monospace;
+	margin-top: 0px;
+	padding: 5px;
+	overflow: auto;
+	background-color: #e0e0e0;
+	color: black;
+}
+
+.exampleBox {
+	min-width: 90%;
+	margin: 15px;
+	overflow: auto;
+	border: 1px solid black;
+}
+
+.exampleTitle {
+	color: black;
+	background-color: #66CCCC;
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.example {
+	white-space: pre;
+	font-family: courier, "courier new", monospace;
+	margin-top: 0px;
+	padding: 5px;
+	overflow: auto;
+	background-color: #e0e9f9;
+	color: black;
+}
+
+.listingBox {
+	min-width: 90%;
+	margin: 15px;
+	overflow: auto;
+	border: 1px solid black;
+}
+
+.listingTitle {
+	color: black;
+	background-color: #87CEEB;
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.listing {
+	white-space: pre;
+	font-family: courier, "courier new", monospace;
+	margin-top: 0px;
+	padding: 5px;
+	overflow: auto;
+	background-color: #ffffff;
+	color: black;
+}
+
+.interactiveBox {
+    min-width: 90%;
+    margin: 15px;
+    overflow: auto;
+    border: 1px solid black;
+}
+
+.interactiveTitle {
+    color: black;
+    background-color: #00FFCC;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+.interactive {
+    white-space: pre;
+    font-family: courier, "courier new", monospace;
+    margin-top: 0px;
+    padding: 5px;
+    overflow: auto;
+    background-color: #ffffff;
+    color: black;
+}
+
+.documentationBox {
+    min-width: 90%;
+    margin: 15px;
+    overflow: auto;
+    border: 1px solid black;
+}
+
+.documentationTitle {
+    color: black;
+    background-color: #D7DADB;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+.documentation {
+    margin-top: 0px;
+    padding: 5px;
+    overflow: auto;
+    background-color: #ffffff;
+    color: black;
+}
+
+
+.listing pre, .observe pre, .example.pre, interactive.pre
+{
+	margin: 0px;
+}
+
+.titleReset
+{
+	clear: both;
+} 
+
+table {
+	font-size: inherit;	
+}
+
+.footer {
+	font-family: verdana, arial, sans-serif;
+	font-style: italic;
+	font-size: .9em;
+	text-align: center;
+}
+
+.heading {
+	font-family: verdana, arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+    margin-top: 20px;
+	color: #8B0000;
+	background-color: inherit;
+}
+
+.headingText {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.subheading {
+	font-family: verdana, arial, sans-serif;
+	font-size: 1.25em;
+	font-weight: bold;
+	color: #8B0000;
+	background-color: inherit;
+	margin-top: 10px;
+}
+
+.subheadingText {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	font-family: verdana, arial, sans-serif;
+	font-weight: bold;
+	color: #8B0000;
+}
+.code {
+	font-family: courier, "courier new", monospace;
+}
+
+.codebox {
+	font-family: courier, "courier new", monospace;
+	border: 1px solid;
+	padding: 2px;
+	margin: 6px;
+	background-color: #E0E0E0;
+	color: black;
+}
+
+.goalTitle {
+	font-family: verdana, arial, sans-serif;
+	font-size: 1.25em;
+	font-weight: bold;
+	color: #8B0000;
+	background-color: inherit;
+	text-align: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.goals {
+}
+
+.outcomes {
+}
+
+.outcomesTitle {
+	font-family: verdana, arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #8B0000;
+	background-color: inherit;
+	text-align: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.title {
+	margin: 0;
+	padding: 0;
+	font-family: verdana, arial, sans-serif;
+	font-size: 23px;
+	text-align: center;
+	font-weight: bold;
+	width: 100%;
+}
+.nav 
+{
+width: 100%;
+border: 0;
+margin-top: 5px;
+padding: 0;
+}
+.resize {
+	font-size: 12px;
+	text-align: left;
+	vertical-align:text-bottom;
+}
+
+.lessonLinks {
+	font-size: 12px;
+	text-align: center;
+	vertical-align:text-bottom;
+}
+
+.lessonLinks a
+{
+	color: black;
+}
+
+
+
+.html {
+	font-family: Arial, sans-serif;
+	white-space: normal;
+}
+
+.lessonList {
+	font-size: 1.25em;
+	font-weight: bold;
+	list-style: none;
+	padding-left: 5px;
+	margin: 5px;
+	clear: both;
+
+}
+.lessonList a
+{
+	color: #8B0000;		
+}
+
+.lessonTitle
+{
+	padding-bottom: 10px;
+}
+
+.courseTitle {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+
+}
+
+.para {
+	margin: 1em 0px;
+}
+.headingList
+{
+	list-style: none;
+	padding-left: 17px;	
+	margin: 3px;
+}
+.subheadingList
+{
+	list-style: none;
+	padding-left: 20px;
+	margin: 3px;
+}
+
+img { max-width: 99%; }
+
+@media print {
+	.lessonLinks,.resize, #timeSurvey {
+		display: none;
+	}
+	body {
+		background-color: white;
+	}
+	.noteBox,.actionListBox,.observeBox,.example,.listingBox,.interactiveBox,.documentationBox,.codeBox,
+	.lessonTitle
+		{
+		page-break-inside:avoid;
+		-webkit-region-break-inside: avoid;
+		text-wrap: unrestricted;
+		word-wrap: break-word;
+		overflow: hidden;
+	}
+	
+	
+}
+
+.red { color:#FF0000; font-weight:600; }
+.green { color:green; font-weight:600; }
+.blue { color:blue; font-weight:600; }
+.cyan { color:#00FFFF; font-weight:600; }
+.darkgreen { color:#006400; font-weight:600; }
+.darkblue { color:#00008B; font-weight:600; }
+.darkred { color:#8B0000; font-weight:600; }
+.orange { color:#FF4400; font-weight:600; }
+.purple { color:#800080; font-weight:600; }
+.darkcyan { color:#008B8B; font-weight:600; }
+.fuchsia { color:#FF00FF; font-weight:600; }
+.gold { color:#FFD700; font-weight:600; }
+.gray { color:#808080; font-weight:600; }
+.yellow { color:#FFFF00; font-weight:600; }
+.teal { color:#008080; font-weight:600; }
+.tomato { color:#FF6347; font-weight:600; }
+.highlight { background-color:#FFFF00; font-weight:600; }
+.comment { color: #999999; font-weight:600; }
+
+
+.lv * { background-color: white; color: black; }
+
+.lvhover { background-color: blue; color: white; padding: 2px; text-decoration: none; }
+
+.versionList, .syllabus
+{
+	list-style: none;
+	padding-left: 5px;
+}
+
+.version
+{
+	font-size: 1.25em;
+	font-weight: bold;
+}
+.lesson a
+{
+	color: #8B0000;		
+}
+
+.pdfLink
+{
+	color: #8B0000;
+}
+
+/* Program & Certificate */
+.certificateList
+{
+	
+}
+
+.certificate
+{
+	margin-bottom:20px;
+}
+.certificate h4
+{
+	margin-top:1px;	
+}
+
+.tracksList
+{
+	padding-left: 0px;
+
+}
+
+
+.track
+{
+	margin-bottom: 10px;
+}
+
+.trackCourseList fieldset
+{
+	border: 1px solid black;
+}
+
+.trackCourse
+{
+	float:left;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.arrow
+{
+	padding: 5px;
+}
+
+.trackCourse div
+{
+	clear:both;
+	
+}
+
+.course
+{
+	margin-bottom: 20px;
+}
+
+
+.gold-button {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffcf3d), color-stop(1, #e8bc37) );
+	background:-moz-linear-gradient( center top, #ffcf3d 5%, #e8bc37 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcf3d', endColorstr='#e8bc37');
+	background-color:#ffcf3d;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	border:1px solid #ffbc47;
+	display:inline-block;
+	color:#000;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:4px 17px;
+	text-decoration:none;
+}
+
+.gold-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e8bc37), color-stop(1, #ffcf3d) );
+	background:-moz-linear-gradient( center top, #e8bc37 5%, #ffcf3d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8bc37', endColorstr='#ffcf3d');
+	background-color:#e8bc37;
+	color: #000;
+}
+
+.gold-button:active {
+	position:relative;
+	top:1px;
+}
+
+.gold-button:visited {
+	color: #000;
+}
